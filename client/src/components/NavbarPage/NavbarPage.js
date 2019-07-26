@@ -1,5 +1,6 @@
 import React from 'react';
 import "./NavbarPage.css";
+// import { Link,withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse } from 'mdbreact';
 import { BrowserRouter as Router} from 'react-router-dom';
@@ -16,9 +17,16 @@ class NavbarPage extends React.Component {
     };
     this.onClick = this.onClick.bind(this);
     this.onLogoutClick = this.onLogoutClick.bind(this);
+    
   }
-  componentDidMount(){
-    this.onLogoutClick = this.onLogoutClick.bind(this);
+  
+  componentDidMount() {
+    // If logged in and user navigates to Login page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.setState({
+        userLogout: true
+      })
+    }
   }
   onLogoutClick = e => {
     e.preventDefault();
@@ -34,7 +42,8 @@ class NavbarPage extends React.Component {
   }
 
   render() {
-    const { user} = this.props.auth;
+    const { user } = this.props.auth;
+    console.log(user.firstname)
     return (
       <div id="appcontainer">
         <header >
@@ -66,17 +75,22 @@ class NavbarPage extends React.Component {
     
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
-                {user.firstname ?
-                               
+                { this.props.auth.isAuthenticated ? 
+                      
+                          
                     <div>
+                    
                     <MDBNavbarBrand  to="#">
-                      {user.firstname}
+                    {user.firstname}
                     </MDBNavbarBrand>
                     <MDBNavbarBrand  to="/about">
                       <a style={{color:"white"}} href="/about" onClick={this.onLogoutClick}>{this.state.userLogout && <p>Logout</p>} </a>
                     </MDBNavbarBrand>
+                    
                     </div>
+                        
                     :
+                    
                     <React.Fragment>
                   <MDBNavbarBrand  to="/register">
                     <a style={{color:"white"}} href="/register">Register</a>
@@ -86,7 +100,7 @@ class NavbarPage extends React.Component {
                     <a style={{color:"white"}} href="/login">Login</a>
                   </MDBNavbarBrand>
                   </React.Fragment>
-                    
+                     
                 }
                 
                 </MDBNavbarNav>

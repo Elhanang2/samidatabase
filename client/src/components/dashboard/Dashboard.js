@@ -8,7 +8,8 @@ class Dashboard extends Component {
   
   render() {
     const { user } = this.props.auth;
-    console.log(user.firstname)
+    
+    console.log(user)
     return (
       <div style={{marginTop:"6rem",marginRight:"1rem"}} className="container">
         <div className="row">

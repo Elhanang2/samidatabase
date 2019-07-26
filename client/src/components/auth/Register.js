@@ -4,6 +4,7 @@ import {MDBContainer, MDBRow, MDBCol, MDBCard, MDBInput, MDBBtn, MDBCardBody} fr
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./Register.css";
+// import classnames from "classnames"
 import { registerUser } from "../../actions/authActions";
 
 class Register extends Component {

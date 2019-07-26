@@ -58,10 +58,7 @@ router.post("/register", (req, res) => {
 router.post("/login", (req, res) => {
 
     //Form validation
-    const {
-        errors,
-        isValid
-    } = validateLoginInput(req.body);
+    const { errors, isValid  } = validateLoginInput(req.body);
 
     //check validation
     if (!isValid) {
@@ -86,7 +83,7 @@ router.post("/login", (req, res) => {
             if (isMatch) {
                 const payload = {
                     id: user.id,
-                    name: user.name
+                    firstname: user.firstname
                 };
                 //sign token
                 jwt.sign(
