@@ -1,4 +1,10 @@
+.navbar-default{
+    color: white;
+
+}
+
 #appcontainer{
+    
     margin-left: 6rem;
     margin-right: 6rem;
 }

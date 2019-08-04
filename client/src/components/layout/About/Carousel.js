@@ -1,23 +1,29 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer }from
 "mdbreact";
 
-const CarouselPage = () => {
+
+const Carousel = () => {
   return (
     <MDBContainer>
       <MDBCarousel
         activeItem={1}
         length={3}
-        showControls={false}
-        showIndicators={false}
+        showControls={true}
+        showIndicators={true}
         className="z-depth-1"
       >
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
               <img
-                className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg"
+              
+                className="cover"
+
+                // object-fit='cover'
+                height={450}
+                width='100%'
+                src="/images/about2.jpeg"
                 alt="First slide"
               />
             </MDBView>
@@ -25,8 +31,11 @@ const CarouselPage = () => {
           <MDBCarouselItem itemId="2">
             <MDBView>
               <img
-                className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg"
+                className="cover"
+                bakcground-size='contain'
+                height={450}
+                width='100%'
+                src="/images/about1.jpeg"
                 alt="Second slide"
               />
             </MDBView>
@@ -34,8 +43,11 @@ const CarouselPage = () => {
           <MDBCarouselItem itemId="3">
             <MDBView>
               <img
-                className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
+                className="cover"
+                bakcground-size='cover'
+                height={450}
+                width='100%'
+                src="/images/about3.jpeg"
                 alt="Third slide"
               />
             </MDBView>
@@ -46,4 +58,4 @@ const CarouselPage = () => {
   );
 }
 
-export default CarouselPage;
+export default Carousel;

@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-// import "./Home.css"
+
+ import  './Home.css';
+//  import "../../../../public/images/home.jpeg"
 class Home extends Component {
     state = {  }
     render() { 
         return ( 
-            <div >
-                <div className="homecontainer" style={{width: "100%", backgroundColor: "#0d47a1", background: "linear-gradient(176deg, #0d47a1 70%, #1a237e calc(70% + 2px))", height:"75vh", borderBottomRightRadius: "10rem" }}>
-                    <h1 style={{color: "white", textAlign: "center", paddingTop: "6rem"}}>Sql database online training</h1>
+            <div style={{fontSize:"18px"}}>
+                <div className="homecontainer" >
+                    
+                        <h1 className="home-header">Sql database online training</h1>
+                    
                 </div>
-                <div style={{width: "100%", height: "500px"}}>
-                 <h1>Something about the course</h1>
+                <div className="home-content">
+                 <h1>SQL Database course</h1>
+                 <p>SQL Database Training Institute is offering real-time, 
+                 practical trainings exclusively on SQL Server Development <span><b>(T-SQL & SQL Dev)</b></span>,  Microsoft Business Intelligence and Data Warehouse <span><b>(MSBI)</b></span>.
+                </p>
+                 <p>We offer Instructor-Led LIVE Online Training, Classroom Training and
+                  On-demand Video Training. We have courses tailored for every Professional - Experienced 
+                  and Starters, from any background. We also offer Job Support and Placement services in USA. 
+                  At SQL Database school we are strongly committed to provide Practical and Real-time Training Sessions. 
+                  All our training courses include Real-time Projects, Weekly Mock Interviews, Placement Assistance and
+                   free 24x7 LIVE Online Lab.</p>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sint excepturi consectetur ab quibusdam debitis! Pariatur, aperiam? Quisquam autem accusamus dolorem, nobis repellendus harum! Deserunt unde qui ipsum architecto! Quo dolores reiciendis deserunt quisquam accusamus excepturi vero! Nemo magni, velit animi quibusdam delectus veniam ex. Labore minus eligendi excepturi quos.</p>
                 </div>
             </div>
          );

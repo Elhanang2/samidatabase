@@ -1,0 +1,31 @@
+.homecontainer {
+    /* width: 100%; */
+    background-Color: #0d47a1;
+    /* background-Image: url("/images/home.jpeg"); */
+    background-Image: linear-gradient(176deg, rgba(0, 0, 0, 0.2) 70%, #f5b133 calc(70% + 2px)), url('/images/home.jpeg');
+    height: 65vh;
+    /* background-Image: url("/images/home.jpeg"); */
+    /* border-BottomRightRadius: "10rem"; */
+    border-bottom-right-radius: 10rem;
+    background-size: cover;
+
+}
+
+.home-header {
+    color: white;
+    font-Weight: 900;
+    font-size: 3rem;
+    text-Align: center;
+    padding-Top: 12rem;
+}
+
+.home-content  {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    line-height: 2rem;
+}
+.home-content h1 {
+    padding:  2rem 0 0;
+    text-align: center;
+}

@@ -48,7 +48,7 @@ class NavbarPage extends React.Component {
       <div id="appcontainer">
         <header >
           <Router>
-            <MDBNavbar  id="appcontainer" className="navbar-default " color="indigo darken-4" fixed="top" dark expand="md" scrolling >
+            <MDBNavbar  id="appcontainer" className="navbar-default " color="indigo darken-3" fixed="top" dark expand="md" scrolling >
               <MDBNavbarBrand to="/">
                 <strong > <a style={{color:"white",fontSize:"26px"}}  href="#home">Logo</a></strong>
 
